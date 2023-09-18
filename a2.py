@@ -38,13 +38,17 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
 
         # 4) if the current thing in the pattern is an _
 
-        # 5) if the current thing in the pattern is the same as the current thing in the
+        # 5) start with this-if the current thing in the pattern is the same as the current thing in the
         # source
 
         # 6) else : this will happen if none of the other conditions are met it
         # indicates the current thing it pattern doesn't match the current thing in
         # source
-
+        if (pattern[pind]==pattern[sind]):
+            pind+=1
+            sind+=1
+    else if (pattern[pind]||pattern[sind]=="_"):
+             
     return result
 
 
