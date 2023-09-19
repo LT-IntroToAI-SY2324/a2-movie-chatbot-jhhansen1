@@ -21,11 +21,10 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
     # keep checking as long as we haven't hit the end of either pattern or source while
     # pind is still a valid index OR sind is still a valid index (valid index means that
     # the index is != to the length of the list)
-    while "FILL IN CONDITION HERE":
+    while (pind<len(pattern) | sind<len(source)):
         # your job is to fill out the body of this loop
 
         # you should delete the following line
-        return ["Not done yet :)"]
 
         # 1) if we reached the end of the pattern but not source
 
@@ -47,13 +46,24 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         if (pattern[pind]==pattern[sind]):
             pind+=1
             sind+=1
-    else if (pattern[pind]||pattern[sind]=="_"):
-             
+        # elif (pattern[pind]!=pattern[sind]):
+        #     return None
+        elif (pattern[pind]=="_"):
+            result+=pattern[sind]
+        elif (pattern[sind]=="_"):
+            result+= pattern[pind]
+        elif (pind==len(pattern) & sind!=len(source)):
+            return None   
+        elif (sind==len(source) & pind!=len(pattern)):
+            return None
+        else: 
+            return None
     return result
 
 
 if __name__ == "__main__":
     assert match(["x", "y", "z"], ["x", "y", "z"]) == [], "test 1 failed"
+    print( match(["x", "z", "z"], ["x", "y", "z"]))
     assert match(["x", "z", "z"], ["x", "y", "z"]) == None, "test 2 failed"
     assert match(["x", "y"], ["x", "y", "z"]) == None, "test 3 failed"
     assert match(["x", "y", "z", "z"], ["x", "y", "z"]) == None, "test 4 failed"
