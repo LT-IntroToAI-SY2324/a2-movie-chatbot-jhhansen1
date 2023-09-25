@@ -12,9 +12,9 @@ This assignment is about learning and applying the while loop and iterating thro
 
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
-
+Understandong the purpose of the percent symbol confused me a fair amount and then once I finally did understand it knowing how to write that in code was very confusing. 
 
 
 2. Explain how you could use the match function for extracting information from a movie database.
-
+by replacing the variables x, y, and z with phrases that may be said when asking a question about movies you can then search for key words in the question and match that to a database of movie information in order to provide an answer.
 
